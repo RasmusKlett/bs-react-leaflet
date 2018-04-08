@@ -1,3 +1,8 @@
+*.bs.js
+.bsb.lock
+.merlin
+build/
+
 # Created by https://www.gitignore.io/api/vim,node,ocaml,linux,visualstudiocode
 
 ### Linux ###
