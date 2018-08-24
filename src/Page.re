@@ -21,7 +21,7 @@ type state = {
   pick: routePick,
 };
 
-let mapScale = 1000.0;
+let mapScale = 3390.0;
 
 /* The Leaflet distance function calculates realworld distance between
    lat-long coordinates. This just treats lat-long as coordinates, and

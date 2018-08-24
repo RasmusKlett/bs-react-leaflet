@@ -41992,7 +41992,7 @@ function make() {
               ];
               var match$1 = self[/* state */1][/* pick */1];
               var tmp;
-              tmp = typeof match$1 === "number" || !match$1.tag ? null : React.createElement("div", undefined, "Distance mellem punkter: ", Pervasives.string_of_float(rawDistance(match$1[0], match$1[1]) * 1000.0));
+              tmp = typeof match$1 === "number" || !match$1.tag ? null : React.createElement("div", undefined, "Distance mellem punkter: ", Pervasives.string_of_float(rawDistance(match$1[0], match$1[1]) * 3390.0));
               return React.createElement("div", undefined, React.createElement("button", {
                               onClick: (function () {
                                   return Curry._1(self[/* send */3], /* StartPicking */1);
@@ -42052,7 +42052,7 @@ var mapWidth = 7016;
 
 var mapHeight = 4961;
 
-var mapScale = 1000.0;
+var mapScale = 3390.0;
 
 exports.mapWidth = mapWidth;
 exports.mapHeight = mapHeight;
