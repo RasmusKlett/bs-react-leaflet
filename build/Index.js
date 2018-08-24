@@ -41937,7 +41937,7 @@ var outerBounds = Leaflet.latLngBounds(ReactLeaflet$ReactTemplate.LatLng[/* make
           0.0,
           0.0
         ]), ReactLeaflet$ReactTemplate.LatLng[/* make */0](/* tuple */[
-          1.0,
+          4961 / 7016,
           1.0
         ]));
 
@@ -41985,7 +41985,7 @@ function make() {
                   /* [] */0
                 ];
               }
-              var mapChildren_000 = ReasonReact.element(undefined, undefined, ReactLeaflet$ReactTemplate.ImageOverlay[/* make */0]("https://orig00.deviantart.net/6fdc/f/2010/251/8/6/magus_for_talisman_by_feliciacano-d2yakqt.jpg", outerBounds, undefined, undefined, /* array */[]));
+              var mapChildren_000 = ReasonReact.element(undefined, undefined, ReactLeaflet$ReactTemplate.ImageOverlay[/* make */0]("../static/asura.jpg", outerBounds, undefined, undefined, /* array */[]));
               var mapChildren = /* :: */[
                 mapChildren_000,
                 pickMarkers
@@ -42048,8 +42048,14 @@ function make() {
         ];
 }
 
+var mapWidth = 7016;
+
+var mapHeight = 4961;
+
 var mapScale = 1000.0;
 
+exports.mapWidth = mapWidth;
+exports.mapHeight = mapHeight;
 exports.outerBounds = outerBounds;
 exports.mapScale = mapScale;
 exports.rawDistance = rawDistance;

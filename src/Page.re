@@ -1,9 +1,14 @@
 open ReactLeaflet;
 
+let (mapWidth, mapHeight) = (7016, 4961);
+
 let outerBounds =
   LeafletRe.latLngBounds(
     ReactLeaflet.LatLng.make((0.0, 0.0)),
-    ReactLeaflet.LatLng.make((1.0, 1.0)),
+    ReactLeaflet.LatLng.make((
+      float_of_int(mapHeight) /. float_of_int(mapWidth),
+      1.0,
+    )),
   );
 
 type routePick =
@@ -18,7 +23,7 @@ type state = {
 
 let mapScale = 1000.0;
 
-/* The Leaflet distance function calculates realworld actual distance between
+/* The Leaflet distance function calculates realworld distance between
    lat-long coordinates. This just treats lat-long as coordinates, and
    calculates raw distance */
 let rawDistance = (p1, p2) =>
@@ -62,10 +67,7 @@ let make = _children => {
         ]
       };
     let mapChildren = [
-      <ImageOverlay
-        url="https://orig00.deviantart.net/6fdc/f/2010/251/8/6/magus_for_talisman_by_feliciacano-d2yakqt.jpg"
-        bounds=outerBounds
-      />,
+      <ImageOverlay url="../static/asura.jpg" bounds=outerBounds />,
       ...pickMarkers,
     ];
     <div>
