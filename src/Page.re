@@ -67,7 +67,7 @@ let make = _children => {
         ]
       };
     let mapChildren = [
-      <ImageOverlay url="../static/asura.jpg" bounds=outerBounds />,
+      <ImageOverlay url="static/asura.jpg" bounds=outerBounds />,
       ...pickMarkers,
     ];
     <div>

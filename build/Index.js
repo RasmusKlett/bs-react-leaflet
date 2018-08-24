@@ -41985,7 +41985,7 @@ function make() {
                   /* [] */0
                 ];
               }
-              var mapChildren_000 = ReasonReact.element(undefined, undefined, ReactLeaflet$ReactTemplate.ImageOverlay[/* make */0]("../static/asura.jpg", outerBounds, undefined, undefined, /* array */[]));
+              var mapChildren_000 = ReasonReact.element(undefined, undefined, ReactLeaflet$ReactTemplate.ImageOverlay[/* make */0]("static/asura.jpg", outerBounds, undefined, undefined, /* array */[]));
               var mapChildren = /* :: */[
                 mapChildren_000,
                 pickMarkers
