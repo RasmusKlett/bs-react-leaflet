@@ -2,6 +2,7 @@
 .bsb.lock
 .merlin
 build/
+lib/
 
 # Created by https://www.gitignore.io/api/vim,node,ocaml,linux,visualstudiocode
 
