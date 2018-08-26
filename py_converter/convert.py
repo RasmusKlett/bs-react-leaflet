@@ -25,7 +25,7 @@ for i, row in enumerate(map_data):
         elif r == 0 and g == 255 and b == 255:
             outfile.write("8,")
         else:
-            outfile.write("99,")
+            outfile.write("11,")
         # elif r == 127 and g == 127 and b == 0:
             # outfile.write("3,")
         # elif r == 0 and g == 127 and b == 0:
