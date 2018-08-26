@@ -19,7 +19,8 @@
   "namespace": true,
   "bs-dependencies": [
     "reason-react",
-    "bs-leaflet"
+    "bs-leaflet",
+    "bs-reactstrap"
   ],
   "refmt": 3,
   "warnings": {

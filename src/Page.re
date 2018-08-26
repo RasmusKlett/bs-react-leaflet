@@ -1,4 +1,5 @@
 open ReactLeaflet;
+open BsReactstrap;
 
 let (mapWidth, mapHeight) = (7016, 4961);
 
@@ -68,15 +69,15 @@ let make = _children => {
       };
     let mapChildren = [
       <ImageOverlay url="static/asura.jpg" bounds=outerBounds />,
+      <Button color="primary" onClick={_event => self.send(StartPicking)}>
+        {ReasonReact.string({js|Vælg|js})}
+      </Button>,
+      <Button color="default" onClick={_event => self.send(ClearSelection)}>
+        {ReasonReact.string({js|Ryd valg|js})}
+      </Button>,
       ...pickMarkers,
     ];
     <div>
-      <button onClick={_event => self.send(StartPicking)}>
-        {ReasonReact.string({js|Vælg|js})}
-      </button>
-      <button onClick={_event => self.send(ClearSelection)}>
-        {ReasonReact.string({js|Ryd valg|js})}
-      </button>
       <Map
         id="mapid"
         dragging=true
