@@ -37,5 +37,46 @@ let terrainToWeight = t =>
 [@bs.module "./js/Dijkstra.js"]
 external dijkstra : (graph, string, string) => (path, float) = "dijkstra";
 
-let g = [|("a", "b", 7.0), ("b", "c", 9.0)|];
-let (path, length) = dijkstra(g, "a", "c");
+let rowColToStr = (row, col) =>
+  string_of_int(row) ++ ";" ++ string_of_int(col);
+
+let toGraph = outerArray => {
+  let graph = Belt.Array.makeUninitializedUnsafe(2 * 479200 - 1400);
+  Belt.Array.(
+    forEachWithIndex(outerArray, (row, innerArray) =>
+      forEachWithIndex(
+        innerArray,
+        (col, terrain) => {
+          if (row < 799) {
+            setUnsafe(
+              graph,
+              row * col + col,
+              (
+                rowColToStr(row, col),
+                rowColToStr(row + 1, col),
+                terrainToWeight(terrain),
+              ),
+            );
+          };
+          if (col < 599) {
+            setUnsafe(
+              graph,
+              row * col + col + 479200 - 700,
+              (
+                rowColToStr(row, col),
+                rowColToStr(row, col + 1),
+                terrainToWeight(terrain),
+              ),
+            );
+          };
+        },
+      )
+    )
+  );
+  graph;
+};
+
+let (path, length) = dijkstra(toGraph(mapData), "1;1", "10;10");
+
+Js.log(length);
+Js.log(path);
